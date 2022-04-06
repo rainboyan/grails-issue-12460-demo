@@ -73,6 +73,16 @@ Then check the tomcat version, `./gradlew dependencies --configuration runtimeCl
 
 Unfortunately, Grails 4 since last release 4.0.13 still use Spring Boot 2.1.x and Spring Framework 5.1.x, which are all [End of Support](https://spring.io/projects/spring-boot#support), so I created a [Grails 4 demo](https://github.com/rainboyan/grails4-upgrade-spring-demo) to show you how to Upgrade Spring to 5.3.18. I hope this demo will help you, but you should **Notice** that, Spring Framework 5.3.x changed lot and may not work with old Grails 4 plugins, please give a hard test and make sure it works.
 
+## Am I Impacted?
+
+If you are interest the RCE vulnerability, and want to know it exists your application or not? I created [a dockerized application](https://github.com/rainboyan/grails-issue-12460-demo/tree/spring_rce) that is vulnerable to the Spring RCE vulnerability (CVE-2022-22965). It's a simple hello world that's based of [Spring tutorials](https://spring.io/guides/gs/handling-form-submission/). I create two versions, `Grails` and `Spring`.
+
+The full source was pushed in the `spring_rce` branch,
+
+```
+git checkout spring_rce
+```
+
 ## Links
 - [Spring Framework RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement)
 - [Spring Framework RCE, Mitigation Alternative](https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative)
@@ -82,3 +92,4 @@ Unfortunately, Grails 4 since last release 4.0.13 still use Spring Boot 2.1.x an
 - [Grails GSP - Fixed Grails issue #12460](https://github.com/grails/grails-gsp/pull/257)
 - [Grails 4 upgrade Spring 5.3.18 demo](https://github.com/rainboyan/grails4-upgrade-spring-demo)
 - [Will Dormann twitter status](https://twitter.com/wdormann/status/1509372145394200579)
+- [Spring RCE POC](https://github.com/rainboyan/grails-issue-12460-demo/tree/spring_rce)
