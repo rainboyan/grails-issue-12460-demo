@@ -3,6 +3,9 @@ package org.grails.demo
 class UrlMappings {
 
     static mappings = {
+        "/greeting"(controller: "greeting", action: "index", method: "GET")
+        "/greeting"(controller: "greeting", action: "save", method: "POST")
+        
         "/$controller/$action?/$id?(.$format)?"{
             constraints {
                 // apply constraints here
