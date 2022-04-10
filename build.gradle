@@ -25,6 +25,7 @@ apply plugin:"org.grails.grails-gsp"
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 configurations {
